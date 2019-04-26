@@ -16,7 +16,7 @@
                   </a>
                 </h4>
                 <div class="post_content">
-                  <p>{{event.details}}</p>
+                  <p>{{event.details | removeHtml}}</p>
                 </div>
                 <a routerLink="/events/{{event.title | slugify}}" class="link-arrow"> Read More
                   <i class="fas fa-long-arrow-alt-right ml-1"></i>

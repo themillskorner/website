@@ -39,6 +39,7 @@ import { SlugifyPipe } from './_pipes/slugify.pipe';
 import { UnslugifyPipe } from './_pipes/unslugify.pipe';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {RemoveHtmlPipe} from './_pipes/remove-html.pipe';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import {HttpClientModule} from '@angular/common/http';
     EventDetailComponent,
     TestimonialsComponent,
     SlugifyPipe,
-    UnslugifyPipe
+    UnslugifyPipe,
+    RemoveHtmlPipe
   ],
   imports: [
     BrowserModule,
