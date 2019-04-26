@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   stripe: {
-    publishableKey: '',
-    secretKey: ''
+    publishableKey: 'pk_test_da7UuHXyzDQtckUoSVx3B4n4',
+    secretKey: 'sk_test_pVXGtluvmTPLLhfHoRHwu7Db'
   }
 };
 
