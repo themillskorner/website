@@ -1,0 +1,127 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <h4>Upcoming Events</h4>
+      <div class="container p-0">
+        <div class="row blog_posts cardPostStyle">
+          <div class="col-md-12 col-lg-12" *ngFor="let event of events">
+            <article>
+              <div class="post_text">
+                <div class="post_meta_top">
+                  <span class="post_meta_date text-uppercase">{{event.date | date}}</span>
+                </div>
+                <h4 class="post_title">
+                  <a data-toggle="modal" data-target="#exampleModal">{{event.title}}
+                  </a>
+                </h4>
+                <div class="post_content">
+                  <p>{{event.details}}</p>
+                </div>
+                <a routerLink="/events/{{event.title | slugify}}" class="link-arrow"> Read More
+                  <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <nav class="pagination_holder">
+<!--          <ul class="pagination mb-55px">-->
+
+<!--            <li class="page-item active">-->
+<!--              <a class="page-link" href="#">1</a>-->
+<!--            </li>-->
+<!--            <li class="page-item">-->
+<!--              <a class="page-link" href="#">2</a>-->
+<!--            </li>-->
+<!--            <li class="page-item">-->
+<!--              <a class="page-link" href="#">3</a>-->
+<!--            </li>-->
+<!--            <li class="page-item">-->
+<!--              <a class="page-link" href="#">4</a>-->
+<!--            </li>-->
+<!--            <li class="page-item">-->
+<!--              <a class="page-link" href="#" aria-label="Next">-->
+<!--                                        <span>-->
+<!--                                            >-->
+<!--                                        </span>-->
+<!--                <span class="sr-only">Next</span>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--          </ul>-->
+        </nav>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="bg-color-grayflame widget pt-30px pb-30px px-30px">
+        <ul class="category-list list-unstyled mb-0" style="text-transform: uppercase">
+          <li>
+            <a routerLink="/making-of-a-mentor">
+              Making of a Mentor
+            </a>
+          </li>
+          <li>
+            <a routerLink="/how-we-came-to-be">
+              how we came to be
+            </a>
+          </li>
+          <li>
+            <a routerLink="/testimonials">
+              testimonials
+            </a>
+          </li>
+          <li>
+            <a routerLink="/kontact">
+              kontact
+            </a>
+          </li>
+          <li>
+            <a routerLink="/donate">
+              donate
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="bg-color-gray-shade-radius px-40px py-60px">
+        <h3>Stay Informed</h3>
+
+        <p>Oratio pertinax cu vix, id his aliquam habemus tractatos. Eu vis cursus modo officiis
+          liberavisse,
+          persequeris complectitur mei et. Id invidunt adipiscing cursus has.</p>
+
+        <input class="form-control rounded-50 validate-required validate-email mb-3" placeholder="First Name">
+
+        <input class="form-control rounded-50 validate-required validate-email mb-3" placeholder="Last Name">
+
+        <div class="form-group form-row  mb-0">
+          <div class="input-group mb-3">
+            <input type="email" name="email" class="form-control rounded-50 validate-required validate-email" placeholder="Your email">
+            <div class="input-group-append">
+              <button type="submit" class="btn rounded-50 form-custom-btn">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="modal-header">-->
+        <!--<h5 class="modal-title">Modal title</h5>-->
+        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+          <!--<span aria-hidden="true">&times;</span>-->
+        <!--</button>-->
+      <!--</div>-->
+      <!--<div class="modal-body">-->
+        <!--<p>Modal body text goes here.</p>-->
+      <!--</div>-->
+      <!--<div class="modal-footer">-->
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+        <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>

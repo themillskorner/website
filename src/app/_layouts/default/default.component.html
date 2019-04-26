@@ -1,0 +1,23 @@
+<div id="main-content" class="bg-color-gray">
+  <!-- Header -->
+  <div class="mb-4" style="border-bottom: 1px solid #ddd;">
+    <app-main-nav></app-main-nav>
+  </div>
+
+  <!-- main -->
+  <div class="container p-0" id="content">
+    <div class="d-flex">
+      <div class="flex pr-3 pl-3 mr-3 mb-3" style="border-right: 2px solid red;">
+        <img style="height: 150px !important" src="assets/images/mills-logo-vert.png">
+      </div>
+      <div class="flex-grow-2 w-100">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <!-- End main -->
+  </div>
+
+  <!-- footer  -->
+  <app-footer></app-footer>
+  <!-- End main -->
+</div>

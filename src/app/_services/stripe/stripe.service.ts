@@ -1,0 +1,42 @@
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {v} from '@angular/core/src/render3';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class StripeService {
+  api: string;
+  headers: HttpHeaders;
+
+  constructor(private httpClient: HttpClient) {
+    this.api = 'https://api.stripe.com/v1';
+
+    this.headers = new HttpHeaders({
+      'Authorization': 'Bearer sk_test_pVXGtluvmTPLLhfHoRHwu7Db',
+      'Content-Type': 'application/x-www-form-urlencoded',
+    });
+  }
+
+  createCharge(charge: { amount: number; customer: string; source: string; description: string }) {
+    const params = new HttpParams()
+      .set('amount', charge.amount.toString())
+      .set('currency', 'usd')
+      .set('customer', charge.customer)
+      .set('source', charge.source)
+      .set('description', charge.description);
+
+    return this.httpClient.post(`${this.api}/charges`, params.toString(), {headers: this.headers});
+  }
+
+  createCustomer(customer: { name: string; email: string; source: string; description: string; }): Observable<any> {
+    const params = new HttpParams()
+      .set('name', customer.name)
+      .set('email', customer.email)
+      .set('source', customer.source)
+      .set('description', customer.description);
+
+    return this.httpClient.post(`${this.api}/customers`, params.toString(), {headers: this.headers});
+  }
+}

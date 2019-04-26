@@ -1,0 +1,105 @@
+<div class="container mb-65px">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <div class="blog_posts stander_blog_single_post">
+        <article>
+          <div class="post_text mt-0">
+            <div class="post_meta_top">
+              <span class="post_meta_date">{{event.date | date}}</span>
+            </div>
+            <h2 class="post_title mb-20px">
+              <a href="blog-single-post.html">{{event.title}}</a>
+            </h2>
+            <div class="post_content">
+              <p>{{event.details}}</p>
+            </div>
+            <div class="post_meta_bottom mt-40px mb-30px">
+<!--              <div class="separator-line mb-25px"></div>-->
+<!--              <div class="navigation post-navigation">-->
+<!--                <div class="row align-items-center nav-links">-->
+<!--                  <div class="col-lg-6 text-lg-left">-->
+<!--                    <div class="nav-previous mb-15px">-->
+<!--                      <div class="nav-subtitle"> Previous Event </div>-->
+<!--                      <div class="nav-title">-->
+<!--                        <a href="#"><i class="fas fa-long-arrow-alt-left fa-lg mr-1" aria-hidden="true"></i> Sellentesque tristiue neque</a></div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="col-lg-6 text-lg-right">-->
+<!--                    <div class="nav-next mb-15px">-->
+<!--                      <div class="nav-subtitle">Next Event</div>-->
+<!--                      <div class="nav-title"><a href="#">Aliquam lobortis urna libero-->
+<!--                        <i class="fas fa-long-arrow-alt-right fa-lg ml-1" aria-hidden="true"></i></a>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+              <div class="separator-line mt-10px"></div>
+            </div>
+            <div class="blog-post-comments">
+
+              <h5 class="comment-reply-title mb-4 d-flex flex-row justify-content-between"><span>Sign Up For Event</span> <span>{{this.event.price / 100 | currency}}</span></h5>
+
+              <form [formGroup]="eventForm" class="form-fields-bg-gray" (ngSubmit)="joinEvent()">
+                <div class="row mb-15px">
+                  <div class="form-group col-md-4">
+                    <input id="fname" formControlName="fname" type="text" class="form-control form-light-border validate-required" placeholder="First Name">
+                    <div *ngIf="submitted && f().fname.errors" class="help-block with-errors">
+                      <ul class="list-unstyled">
+                        <li>First Name is required.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <input id="lname" formControlName="lname" type="text" class="form-control form-light-border validate-required" placeholder="Last Name">
+                    <div *ngIf="submitted && f().lname.errors" class="help-block with-errors">
+                      <ul class="list-unstyled">
+                        <li>Last Name is required.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <input id="email" formControlName="email" type="email" name="Email" class="form-control form-light-border validate-required validate-email" placeholder="Email">
+                    <div *ngIf="submitted && f().email.errors" class="help-block with-errors">
+                      <ul class="list-unstyled">
+                        <li>Email is required.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-15px">
+                  <div class="form-group col-md-4">
+                    <input type="text" formControlName="username" id="website" name="username" class="form-control form-light-border" placeholder="Username">
+                    <div *ngIf="submitted && f().username.errors" class="help-block with-errors">
+                      <ul class="list-unstyled">
+                        <li>Username is required.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-15px py-3">
+                  <div class="form-group">
+                    <div id="card-element"></div>
+                  </div>
+
+                  <div id="card-errors" role="alert"></div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-12 col-xs-12">
+                    <button type="submit" [disabled]="submitted || paidFor" class="btn btn-shadow rounded-1 mr-3">Sign Up</button>
+                    <span *ngIf="paidFor" class="text-success">You have been singed up.</span>
+                    <span *ngIf="chargeError || customerError" class="text-danger">{{customerError || chargeError}}</span>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>

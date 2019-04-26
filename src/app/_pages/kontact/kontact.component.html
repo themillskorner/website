@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <h2 class="mb-15px">Get in touch with us</h2>
+      <p>Have any questions, concerns, or interested in joining the team? Feel free to get in contact.
+      </p>
+      <p class="lead mb-3">
+        Kevin Mills - Executive Director<br>
+        P.O.Box 93873 Pasadena, CA 91109</p>
+      <p class="lead">E:
+        <a href="#">kevin@themillskorner.org</a>
+      </p>
+    </div>
+
+    <div class="col-md-6 offset-md-1">
+      <form id="contact-form" data-toggle="validator" role="form" class="form-fields-bg-transparent" method="post"
+            action="contact.php" novalidate="true">
+        <div class="row mb-0">
+          <div class="col-sm-6 col-xs-12">
+            <div class="form-group mb-30px">
+              <input id="form_name" type="text" name="name" class="form-control" placeholder="Your Name *"
+                     required="required" data-error="Your Name is required.">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xs-12">
+            <div class="form-group mb-30px has-error">
+              <input id="form_email" type="email" name="email" class="form-control" placeholder="Your email *"
+                     required="required" data-error="Valid email is required.">
+              <div class="help-block with-errors">
+                <ul class="list-unstyled">
+                  <li>Valid email is required.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row mb-15px">
+          <div class="form-group col-md-12">
+            <div class="form-group mb-0">
+              <textarea id="form_message" name="message" class="form-control" placeholder="Your Message *" rows="7"
+                        required="required" data-error="Please,leave us a message."></textarea>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-xs-12 align-left">
+            <button type="submit" class="btn btn-dark rounded-0 disabled" style="pointer-events: all; cursor: pointer;">
+              Submit
+            </button>
+          </div>
+        </div>
+        <div class="loading-spinner"></div>
+        <div class="messages mt-20px"></div>
+      </form>
+    </div>
+  </div>
+</div>
