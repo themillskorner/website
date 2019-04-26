@@ -68,6 +68,7 @@ export class EventDetailComponent implements OnInit {
       fname: ['', Validators.required],
       lname: ['', Validators.required],
       email: ['', Validators.required],
+      phone: ['', Validators.required],
       username: ['', Validators.required],
       token: ['']
     });
@@ -125,6 +126,7 @@ export class EventDetailComponent implements OnInit {
     this.stripeService.createCustomer({
       name: `${this.f().fname.value} ${this.f().lname.value}`,
       email: this.f().email.value,
+      phone: this.f().phone.value,
       source: this.f().token.value.id,
       description: `${this.event.title} (username: ${this.f().username.value})`,
     }).subscribe(customer => {

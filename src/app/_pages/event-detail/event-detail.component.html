@@ -8,11 +8,13 @@
               <span class="post_meta_date">{{event.date | date}}</span>
             </div>
             <h2 class="post_title mb-20px">
-              <a href="blog-single-post.html">{{event.title}}</a>
+              {{event.title}}
             </h2>
-            <div class="post_content">
-              <p>{{event.details}}</p>
-            </div>
+
+            <p class="mb-3"><strong>Address:</strong> {{event.venue}} - {{event.address}}</p>
+
+            <div class="post_content" [innerHTML]="event.details"></div>
+
             <div class="post_meta_bottom mt-40px mb-30px">
 <!--              <div class="separator-line mb-25px"></div>-->
 <!--              <div class="navigation post-navigation">-->
@@ -70,7 +72,15 @@
 
                 <div class="row mb-15px">
                   <div class="form-group col-md-4">
-                    <input type="text" formControlName="username" id="website" name="username" class="form-control form-light-border" placeholder="Username">
+                    <input type="text" formControlName="phone" name="phone" class="form-control form-light-border" placeholder="Phone">
+                    <div *ngIf="submitted && f().phone.errors" class="help-block with-errors">
+                      <ul class="list-unstyled">
+                        <li>Phone number is required.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <input type="text" formControlName="username" name="username" class="form-control form-light-border" placeholder="Username">
                     <div *ngIf="submitted && f().username.errors" class="help-block with-errors">
                       <ul class="list-unstyled">
                         <li>Username is required.</li>

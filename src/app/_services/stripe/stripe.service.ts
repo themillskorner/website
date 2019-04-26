@@ -31,10 +31,11 @@ export class StripeService {
     return this.httpClient.post(`${this.api}/charges`, params.toString(), {headers: this.headers});
   }
 
-  createCustomer(customer: { name: string; email: string; source: string; description: string; }): Observable<any> {
+  createCustomer(customer: { name: string; email: string; source: string; description: string; phone: string }): Observable<any> {
     const params = new HttpParams()
       .set('name', customer.name)
       .set('email', customer.email)
+      .set('phone', customer.phone)
       .set('source', customer.source)
       .set('description', customer.description);
 

@@ -3,4 +3,6 @@ export interface IEvent {
   title: string;
   details: string;
   price: number;
+  venue: string;
+  address: string;
 }
