@@ -99,7 +99,7 @@
 
                 <div class="form-group row">
                   <div class="col-sm-12 col-xs-12">
-                    <button type="submit" [disabled]="submitted || paidFor" class="btn btn-shadow rounded-1 mr-3">Sign Up</button>
+                    <button type="submit" [disabled]="eventForm.invalid || (submitted || paidFor)" class="btn btn-shadow rounded-1 mr-3">Sign Up</button>
                     <span *ngIf="paidFor" class="text-success">You have been singed up.</span>
                     <span *ngIf="chargeError || customerError" class="text-danger">{{customerError || chargeError}}</span>
                   </div>
