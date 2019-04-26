@@ -5,6 +5,7 @@ import {ActivatedRoute} from '@angular/router';
 import {UnslugifyPipe} from '../../_pipes/unslugify.pipe';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {StripeService} from '../../_services/stripe/stripe.service';
+import {environment} from '../../../environments/environment';
 
 declare var Stripe: any;
 
@@ -48,7 +49,7 @@ export class EventDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private stripeService: StripeService,
     private unslugifyPipe: UnslugifyPipe) {
-    this.stripe = Stripe('pk_test_da7UuHXyzDQtckUoSVx3B4n4');
+    this.stripe = Stripe(environment.stripe.publishableKey);
   }
 
   ngOnInit() {

@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {v} from '@angular/core/src/render3';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class StripeService {
     this.api = 'https://api.stripe.com/v1';
 
     this.headers = new HttpHeaders({
-      'Authorization': 'Bearer sk_test_pVXGtluvmTPLLhfHoRHwu7Db',
+      'Authorization': `Bearer ${environment.stripe.secretKey}`,
       'Content-Type': 'application/x-www-form-urlencoded',
     });
   }
