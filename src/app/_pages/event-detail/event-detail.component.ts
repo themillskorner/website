@@ -48,7 +48,8 @@ export class EventDetailComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private stripeService: StripeService,
-    private unslugifyPipe: UnslugifyPipe) {
+    private unslugifyPipe: UnslugifyPipe
+  ) {
     this.stripe = Stripe(environment.stripe.publishableKey);
   }
 

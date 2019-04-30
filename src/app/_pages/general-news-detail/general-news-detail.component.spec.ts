@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NcaaStandardsComponent } from './ncaa-standards.component';
+import { GeneralNewsDetailComponent } from './general-news-detail.component';
 
-describe('NcaaStandardsComponent', () => {
-  let component: NcaaStandardsComponent;
-  let fixture: ComponentFixture<NcaaStandardsComponent>;
+describe('GeneralNewsDetailComponent', () => {
+  let component: GeneralNewsDetailComponent;
+  let fixture: ComponentFixture<GeneralNewsDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NcaaStandardsComponent ]
+      declarations: [ GeneralNewsDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NcaaStandardsComponent);
+    fixture = TestBed.createComponent(GeneralNewsDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
