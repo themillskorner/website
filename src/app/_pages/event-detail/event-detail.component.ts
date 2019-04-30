@@ -70,7 +70,7 @@ export class EventDetailComponent implements OnInit {
       lname: ['', Validators.required],
       email: ['', Validators.required],
       phone: ['', Validators.required],
-      username: ['', Validators.required],
+      username: ['', this.event.title === 'Fortnite Battle Royal Tournament' ? Validators.required : undefined],
       token: ['']
     });
   }

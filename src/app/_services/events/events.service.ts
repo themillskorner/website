@@ -27,6 +27,7 @@ export class EventsService {
           '<a href="https://www.topdrawersoccer.com/college-soccer-articles/confident-mills-key-for-uscs-championship_aid41137">here</a> ' +
           '</p>' +
           '<p>Now you can learn a few great tips to improve your game with Kayla Mills during her Summer Kamp. </p>',
+        price: 6000
       },
       {
         date: new Date('6/8/2019'),
@@ -45,6 +46,7 @@ export class EventsService {
           '<a href="https://www.topdrawersoccer.com/college-soccer-articles/confident-mills-key-for-uscs-championship_aid41137">here</a> ' +
           '</p>' +
           '<p>Now you can learn a few great tips to improve your game with Kayla Mills during her Summer Kamp. </p>',
+        price: 6000
       },
       {
         date: new Date('6/15/2019'),
@@ -63,6 +65,7 @@ export class EventsService {
           '<a href="https://www.topdrawersoccer.com/college-soccer-articles/confident-mills-key-for-uscs-championship_aid41137">here</a> ' +
           '</p>' +
           '<p>Now you can learn a few great tips to improve your game with Kayla Mills during her Summer Kamp. </p>',
+        price: 6000
       },
       {
         date: new Date('4/28/2019'),
@@ -107,6 +110,7 @@ export class EventsService {
           '<a href="https://www.topdrawersoccer.com/college-soccer-articles/confident-mills-key-for-uscs-championship_aid41137">here</a> ' +
           '</p>' +
           '<p>Now you can learn a few great tips to improve your game with Kayla Mills during her Summer Kamp. </p>',
+        price: 6000
       },
     ]);
   }
