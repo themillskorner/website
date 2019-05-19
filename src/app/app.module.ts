@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {NgxImageGalleryModule} from 'ngx-image-gallery';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -60,8 +59,7 @@ import {BoardOfDirectorsComponent} from './_pages/board-of-directors/board-of-di
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
-    NgxImageGalleryModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
