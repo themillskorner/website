@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-making-of-a-mentor',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MakingOfAMentorComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  jumpTo($element) {
+    $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+  }
 }

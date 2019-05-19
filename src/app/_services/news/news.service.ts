@@ -24,7 +24,7 @@ export class NewsService {
       },
       {
         published: new Date('4/29/2019'),
-        title: 'Natitional Goal 5 Commercial',
+        title: 'Kayla\'s Goal Five commercial debut',
         content: this._sanitizer.bypassSecurityTrustHtml('<iframe width="100%" height="395" ' +
           'src="https://www.youtube.com/embed/R-HSQVZ4CtU?controls=0" frameborder="0" ' +
           'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')

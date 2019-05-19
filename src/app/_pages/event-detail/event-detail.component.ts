@@ -40,6 +40,7 @@ export class EventDetailComponent implements OnInit {
       iconColor: '#fa755a'
     }
   };
+  images;
 
   @ViewChild('#exampleModal') paymentModal;
 

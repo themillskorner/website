@@ -11,7 +11,7 @@ export class EventsService {
   constructor() {
     this.orderByDate([
       {
-        date: new Date('6/2/2019'),
+        date: new Date('6/1/2019'),
         title: 'Kicks with Kay Soccer Kamp',
         details: '<div class="video">\n' +
           '<video width="100%" controls id="videoPlayer">\n' +
@@ -27,7 +27,18 @@ export class EventsService {
           '<a href="https://www.topdrawersoccer.com/college-soccer-articles/confident-mills-key-for-uscs-championship_aid41137">here</a> ' +
           '</p>' +
           '<p>Now you can learn a few great tips to improve your game with Kayla Mills during her Summer Kamp. </p>',
-        price: 6000
+        price: 15000,
+        images: [
+          'assets/images/kayla/1.jpg',
+          'assets/images/kayla/2.jpg',
+          'assets/images/kayla/3.jpg',
+          'assets/images/kayla/4.jpg',
+          'assets/images/kayla/5.jpg',
+          'assets/images/kayla/6.jpg',
+          'assets/images/kayla/7.jpg',
+          'assets/images/kayla/8.jpg',
+          'assets/images/kayla/9.jpg'
+        ]
       },
       {
         date: new Date('6/8/2019'),
@@ -46,7 +57,18 @@ export class EventsService {
           '<a href="https://www.topdrawersoccer.com/college-soccer-articles/confident-mills-key-for-uscs-championship_aid41137">here</a> ' +
           '</p>' +
           '<p>Now you can learn a few great tips to improve your game with Kayla Mills during her Summer Kamp. </p>',
-        price: 6000
+        price: 15000,
+        images: [
+          'assets/images/kayla/1.jpg',
+          'assets/images/kayla/2.jpg',
+          'assets/images/kayla/3.jpg',
+          'assets/images/kayla/4.jpg',
+          'assets/images/kayla/5.jpg',
+          'assets/images/kayla/6.jpg',
+          'assets/images/kayla/7.jpg',
+          'assets/images/kayla/8.jpg',
+          'assets/images/kayla/9.jpg'
+        ]
       },
       {
         date: new Date('6/15/2019'),
@@ -65,10 +87,21 @@ export class EventsService {
           '<a href="https://www.topdrawersoccer.com/college-soccer-articles/confident-mills-key-for-uscs-championship_aid41137">here</a> ' +
           '</p>' +
           '<p>Now you can learn a few great tips to improve your game with Kayla Mills during her Summer Kamp. </p>',
-        price: 6000
+        price: 15000,
+        images: [
+          'assets/images/kayla/1.jpg',
+          'assets/images/kayla/2.jpg',
+          'assets/images/kayla/3.jpg',
+          'assets/images/kayla/4.jpg',
+          'assets/images/kayla/5.jpg',
+          'assets/images/kayla/6.jpg',
+          'assets/images/kayla/7.jpg',
+          'assets/images/kayla/8.jpg',
+          'assets/images/kayla/9.jpg'
+        ]
       },
       {
-        date: new Date('4/28/2019'),
+        date: new Date('6/2/2019'),
         title: 'Fortnite Battle Royal Tournament',
         details: '<p>Elimination rounds will be determined by four (4) solo matches. For information call Kevin at 818-317-1256.</p>' +
           '<p><i>Online participants mandatory (if not, you will be disqualified) to stream live.</i></p>' +
@@ -91,7 +124,8 @@ export class EventsService {
           '<p>Practice round will be provided</p>',
         venue: '404 ESport Gaming',
         address: '1447 Foothull Blvd. La Verne, Ca 91750',
-        price: 3500
+        price: 3500,
+        images: []
       },
       {
         date: new Date('6/22/2019'),
@@ -110,7 +144,18 @@ export class EventsService {
           '<a href="https://www.topdrawersoccer.com/college-soccer-articles/confident-mills-key-for-uscs-championship_aid41137">here</a> ' +
           '</p>' +
           '<p>Now you can learn a few great tips to improve your game with Kayla Mills during her Summer Kamp. </p>',
-        price: 6000
+        price: 15000,
+        images: [
+          'assets/images/kayla/1.jpg',
+          'assets/images/kayla/2.jpg',
+          'assets/images/kayla/3.jpg',
+          'assets/images/kayla/4.jpg',
+          'assets/images/kayla/5.jpg',
+          'assets/images/kayla/6.jpg',
+          'assets/images/kayla/7.jpg',
+          'assets/images/kayla/8.jpg',
+          'assets/images/kayla/9.jpg'
+        ]
       },
     ]);
   }

@@ -5,7 +5,7 @@
         <h1 class="py-15px">Makings of a Mentor</h1>
         <p class="lead mb-35px">A mentor is someone whom sees a little of himself in each individual he comes in
           contact with, yet, he sees more talent and ability within</p>
-        <a class="btn btn-outline-light" href="#content">More Info</a>
+        <a class="btn btn-outline-light" (click)="jumpTo(content)">More Info</a>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-8" style="text-align: justify">
+    <div class="col-lg-8" #content style="text-align: justify">
       <h4>Makings of a Mentor</h4>
 
       <p>Most people would have trouble understanding the complexity of the day to day responsibilities of those whom
@@ -50,6 +50,11 @@
           <li>
             <a routerLink="/bio">
               BIO
+            </a>
+          </li>
+          <li>
+            <a routerLink="/board-of-directors">
+              BOARD OF DIRECTORS
             </a>
           </li>
         </ul>

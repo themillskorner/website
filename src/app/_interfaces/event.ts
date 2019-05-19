@@ -5,4 +5,5 @@ export interface IEvent {
   price: number;
   venue?: string;
   address: string;
+  images?: string[];
 }
