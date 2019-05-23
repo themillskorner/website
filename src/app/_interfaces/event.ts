@@ -6,4 +6,8 @@ export interface IEvent {
   venue?: string;
   address: string;
   images?: string[];
+  links?: {
+    title: string;
+    link: string;
+  }[];
 }

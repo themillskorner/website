@@ -13,6 +13,13 @@
 
             <p class="mb-3"><strong>Address:</strong> {{event.venue && event.address ? event.venue + ' - ' + event.address : 'TBD'}}</p>
 
+            <h4>Links</h4>
+            <div class="d-flex flex-row mb-4">
+              <div *ngFor="let link of event.links" class="mr-3">
+                <a [href]="link.link">{{link.title}}</a>
+              </div>
+            </div>
+
             <div class="post_content" [innerHTML]="event.details"></div>
 
             <div class="row">
@@ -22,26 +29,6 @@
             </div>
 
             <div class="post_meta_bottom mt-40px mb-30px">
-<!--              <div class="separator-line mb-25px"></div>-->
-<!--              <div class="navigation post-navigation">-->
-<!--                <div class="row align-items-center nav-links">-->
-<!--                  <div class="col-lg-6 text-lg-left">-->
-<!--                    <div class="nav-previous mb-15px">-->
-<!--                      <div class="nav-subtitle"> Previous Event </div>-->
-<!--                      <div class="nav-title">-->
-<!--                        <a href="#"><i class="fas fa-long-arrow-alt-left fa-lg mr-1" aria-hidden="true"></i> Sellentesque tristiue neque</a></div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="col-lg-6 text-lg-right">-->
-<!--                    <div class="nav-next mb-15px">-->
-<!--                      <div class="nav-subtitle">Next Event</div>-->
-<!--                      <div class="nav-title"><a href="#">Aliquam lobortis urna libero-->
-<!--                        <i class="fas fa-long-arrow-alt-right fa-lg ml-1" aria-hidden="true"></i></a>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
               <div class="separator-line mt-10px"></div>
             </div>
             <div class="blog-post-comments">
@@ -115,6 +102,9 @@
             </div>
           </div>
         </article>
+
+        <p class="text-center mt-3">We use Stripe to process credit card payments on our website. Stripe is certified as PCI Service Provider Level 1 -- the most stringent level of certification possible.</p>
+
       </div>
     </div>
   </div>
