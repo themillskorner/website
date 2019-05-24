@@ -5,6 +5,7 @@ export const environment = {
     secretKey: ''
   },
   mailgun: {
+    email: '',
     api_key: ''
   }
 };
