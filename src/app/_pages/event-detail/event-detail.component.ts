@@ -71,7 +71,6 @@ export class EventDetailComponent implements OnInit {
       lname: ['', Validators.required],
       email: ['', Validators.required],
       phone: ['', Validators.required],
-      username: ['', this.event.title === 'Fortnite Battle Royal Tournament' ? Validators.required : undefined],
       token: ['']
     });
   }
@@ -112,7 +111,6 @@ export class EventDetailComponent implements OnInit {
 
     this.stripe.createToken(this.card).then(function (result) {
       if (result.error) {
-        // Inform the user if there was an error.
         const errorElement = document.getElementById('card-errors');
         errorElement.textContent = result.error.message;
       } else {
@@ -130,7 +128,7 @@ export class EventDetailComponent implements OnInit {
       email: this.f().email.value,
       phone: this.f().phone.value,
       source: this.f().token.value.id,
-      description: `${this.event.title} (username: ${this.f().username.value})`,
+      description: this.event.title,
     }).subscribe(customer => {
       this.stripeService.createCharge({
         amount: this.event.price,
