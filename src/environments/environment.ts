@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   stripe: {
-    publishableKey: 'pk_test_da7UuHXyzDQtckUoSVx3B4n4',
-    secretKey: 'sk_test_pVXGtluvmTPLLhfHoRHwu7Db'
+    publishableKey: '',
+    secretKey: ''
   },
   mailgun: {
-    email: 'andreas@sapioweb.com',
-    api_key: 'key-ad9a7e1a8f3099390af83736fbbbbd5f'
+    email: '',
+    api_key: ''
   }
 };
 
