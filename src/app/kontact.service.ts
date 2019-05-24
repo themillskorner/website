@@ -12,18 +12,16 @@ export class KontactService {
   constructor(
     private httpClient: HttpClient
   ) {
-    this.domain = 'https://api.mailgun.net/v3/themillskorner.org';
+    this.domain = 'https://cors-anywhere.herokuapp.com/https://api.mailgun.net/v3/themillskorner.org';
   }
 
-  sendMail(to: string, subject: string, message: string): Observable<any> {
+  sendMail(from: string, to: string, subject: string, message: string): Observable<any> {
     const headers = new HttpHeaders({
-      'Authentication': btoa(`api:${environment.mailgun.api_key}`),
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Access-Control-Allow-Origin': '*'
+      'Authentication': `Basic ${btoa(`api:${environment.mailgun.api_key}`)}`,
     });
 
     const params = new HttpParams()
-      .set('from', 'theMillsKorner <kevin@themillskorner.org>')
+      .set('from', from)
       .set('to', to)
       .set('subject', subject)
       .set('text', message);

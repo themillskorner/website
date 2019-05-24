@@ -13,34 +13,40 @@
     </div>
 
     <div class="col-md-6 offset-md-1">
-      <form id="contact-form" data-toggle="validator" role="form" class="form-fields-bg-transparent" method="post"
-            action="contact.php" novalidate="true" (ngSubmit)="kontact()">
+      <form class="form-fields-bg-transparent" (ngSubmit)="kontact()" [formGroup]="contactForm">
         <div class="row mb-0">
           <div class="col-sm-6 col-xs-12">
             <div class="form-group mb-30px">
-              <input id="form_name" type="text" name="name" class="form-control" placeholder="Your Name *"
-                     required="required" data-error="Your Name is required.">
-              <div class="help-block with-errors"></div>
+
+              <input type="text" formControlName="name" name="name" class="form-control" placeholder="Your Name *">
+              <div class="help-block with-errors" *ngIf="submitted && contactForm.controls.name.errors">
+                <span *ngIf="contactForm.controls.name.errors.required">Required</span>
+              </div>
+
             </div>
           </div>
           <div class="col-sm-6 col-xs-12">
             <div class="form-group mb-30px has-error">
-              <input id="form_email" type="email" name="email" class="form-control" placeholder="Your email *"
-                     required="required" data-error="Valid email is required.">
-              <div class="help-block with-errors">
-                <ul class="list-unstyled">
-                  <li>Valid email is required.</li>
-                </ul>
+
+              <input type="email" formControlName="email" name="email" class="form-control" placeholder="Your email *">
+              <div class="help-block with-errors" *ngIf="submitted && contactForm.controls.email.errors">
+                <span *ngIf="contactForm.controls.email.errors.required">Required</span>
+                <span *ngIf="contactForm.controls.email.errors.email">Not proper email format</span>
               </div>
+
             </div>
           </div>
         </div>
         <div class="form-row mb-15px">
           <div class="form-group col-md-12">
             <div class="form-group mb-0">
-              <textarea id="form_message" name="message" class="form-control" placeholder="Your Message *" rows="7"
-                        required="required" data-error="Please,leave us a message."></textarea>
-              <div class="help-block with-errors"></div>
+
+              <textarea formControlName="message" name="message" class="form-control" placeholder="Your Message *"
+                        rows="7"></textarea>
+              <div class="help-block with-errors" *ngIf="submitted && contactForm.controls.message.errors">
+                <span *ngIf="contactForm.controls.message.errors.required">Required</span>
+              </div>
+
             </div>
           </div>
         </div>
@@ -52,7 +58,9 @@
           </div>
         </div>
         <div class="loading-spinner"></div>
-        <div class="messages mt-20px"></div>
+        <div class="messages mt-20px text-success">
+          <strong>{{formStatus}}</strong>
+        </div>
       </form>
     </div>
   </div>
