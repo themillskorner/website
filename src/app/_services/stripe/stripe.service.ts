@@ -19,13 +19,14 @@ export class StripeService {
     });
   }
 
-  createCharge(charge: { amount: number; customer: string; source: string; description: string }) {
+  createCharge(charge: { amount: number; customer: string; source: string; description: string, customerEmail?: string }) {
     const params = new HttpParams()
       .set('amount', charge.amount.toString())
       .set('currency', 'usd')
       .set('customer', charge.customer)
       .set('source', charge.source)
-      .set('description', charge.description);
+      .set('description', charge.description)
+      .set('receipt_email', charge.customerEmail);
 
     return this.httpClient.post(`${this.api}/charges`, params.toString(), {headers: this.headers});
   }
