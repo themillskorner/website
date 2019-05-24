@@ -9,7 +9,7 @@ import {environment} from '../../../environments/environment';
   styleUrls: ['./kontact.component.css']
 })
 export class KontactComponent implements OnInit {
-  private contactForm: FormGroup;
+  public contactForm: FormGroup;
   public submitted: boolean;
   public formStatus: string;
 
