@@ -3,5 +3,8 @@ export const environment = {
   stripe: {
     publishableKey: '',
     secretKey: ''
+  },
+  mailgun: {
+    api_key: ''
   }
 };

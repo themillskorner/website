@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {KontactService} from '../../kontact.service';
 
 @Component({
   selector: 'app-kontact',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KontactComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private kontactService: KontactService
+  ) {
+  }
 
   ngOnInit() {
   }
 
+  kontact() {
+    this.kontactService.sendMail('andreas@sapioweb.com', 'just a test', 'I am testing')
+      .subscribe(
+        mail => console.log(mail),
+        err => console.log(err)
+      );
+  }
 }
