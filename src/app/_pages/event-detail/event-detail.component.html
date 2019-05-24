@@ -6,6 +6,7 @@
           <div class="post_text mt-0">
             <div class="post_meta_top">
               <span class="post_meta_date">{{event.date | date}}</span>
+              <span class="post_meta_date" *ngIf="event.ages">Ages {{event.ages}}</span>
             </div>
             <h2 class="post_title mb-20px">
               {{event.title}}

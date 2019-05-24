@@ -15,20 +15,7 @@ export class NewsService {
   ) {
     this.safeUrl = this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/R-HSQVZ4CtU?controls=0');
 
-    this.news = [
-      {
-        published: new Date('4/29/2019'),
-        title: 'Elements of Effective Practice for Mentoring [PDF]',
-        content: '<p><a href="/assets/Mentoring_the blueprint_2019.pdf" download="Mentoring_the blueprint_2019.pdf">' +
-          'Download the mentoring blueprint 2019 here</a></p>',
-      },
-      {
-        published: new Date('4/29/2019'),
-        title: 'Kayla\'s Goal Five commercial debut',
-        content: this._sanitizer.bypassSecurityTrustHtml('<iframe width="100%" height="395" ' +
-          'src="https://www.youtube.com/embed/R-HSQVZ4CtU?controls=0" ' +
-          'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
-      },
+    this.orderByDate([
       {
         published: new Date('5/21/2019'),
         title: 'America Has Lost A Generation Of Black Boys',
@@ -89,8 +76,21 @@ export class NewsService {
           '<li>4) Build a positive peer culture for black boys.</li>' +
           '<li>5) Teach black boys self-discipline, culture and history.</li>' +
           '<li>6) Teach black boys and the communities in which they live to embrace education and life-long learning.</li></ul></p>'
+      },
+      {
+        published: new Date('4/29/2019'),
+        title: 'Elements of Effective Practice for Mentoring [PDF]',
+        content: '<p><a href="/assets/Mentoring_the blueprint_2019.pdf" download="Mentoring_the blueprint_2019.pdf">' +
+          'Download the mentoring blueprint 2019 here</a></p>',
+      },
+      {
+        published: new Date('4/29/2019'),
+        title: 'Kayla\'s Goal Five commercial debut',
+        content: this._sanitizer.bypassSecurityTrustHtml('<iframe width="100%" height="395" ' +
+          'src="https://www.youtube.com/embed/R-HSQVZ4CtU?controls=0" ' +
+          'allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
       }
-    ];
+    ]);
   }
 
   all(): Observable<INews[]> {
@@ -99,5 +99,11 @@ export class NewsService {
 
   get(slug): Observable<INews> {
     return of(this.news.find(e => e.title.toLowerCase().replace(/[\[\]']+/g, '') === slug));
+  }
+
+  orderByDate(news) {
+    this.news = news.sort((a, b) => {
+      return b.published.getTime() - a.published.getTime();
+    });
   }
 }

@@ -6,11 +6,8 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="row blog_posts cardPostStyle">
-            <div *ngFor="let article of news" class="col-md-6 col-lg-6">
+            <div *ngFor="let article of news" class="col-12">
               <article>
-<!--                <div class="post_img">-->
-<!--                  <img src="https://source.unsplash.com/0r0ONv0-eWc/360x200" alt="Card image cap">-->
-<!--                </div>-->
                 <div class="post_text">
                   <div class="post_meta_top">
                     <span class="post_meta_date">{{article.published | date}}</span>
@@ -26,31 +23,6 @@
               </article>
             </div>
           </div>
-<!--          <nav class="pagination_holder">-->
-<!--            <ul class="pagination mb-55px">-->
-
-<!--              <li class="page-item active">-->
-<!--                <a class="page-link" href="#">1</a>-->
-<!--              </li>-->
-<!--              <li class="page-item">-->
-<!--                <a class="page-link" href="#">2</a>-->
-<!--              </li>-->
-<!--              <li class="page-item">-->
-<!--                <a class="page-link" href="#">3</a>-->
-<!--              </li>-->
-<!--              <li class="page-item">-->
-<!--                <a class="page-link" href="#">4</a>-->
-<!--              </li>-->
-<!--              <li class="page-item">-->
-<!--                <a class="page-link" href="#" aria-label="Next">-->
-<!--                                        <span>-->
-<!--                                            >-->
-<!--                                        </span>-->
-<!--                  <span class="sr-only">Next</span>-->
-<!--                </a>-->
-<!--              </li>-->
-<!--            </ul>-->
-<!--          </nav>-->
         </div>
 
         <div class="col-lg-4">
