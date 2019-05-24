@@ -9,7 +9,7 @@ export const environment = {
     secretKey: 'sk_test_pVXGtluvmTPLLhfHoRHwu7Db'
   },
   mailgun: {
-    api_key: 'key-ad9a7e1a8f3099390af83736fbbbbd5f\n'
+    api_key: 'key-ad9a7e1a8f3099390af83736fbbbbd5f'
   }
 };
 
